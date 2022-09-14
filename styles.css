@@ -94,7 +94,7 @@ body {
   border: 2px solid white !important;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .title {
   text-align: center;

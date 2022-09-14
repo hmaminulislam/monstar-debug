@@ -12,7 +12,68 @@
 
 <body>
     <section class="container">
-        
+        <div>
+            <h1 class="text-center fs-1">Question</h1>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is the difference between localstorage and sessionstorage?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>sessionStorage is similar to localStorage ; the difference is that while data in localStorage
+                            doesn't expire, data in
+                            sessionStorage is cleared when the page session ends.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What is the difference between global scope and block scope?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Block scope: Before diving in the scope categories that exist in JS, we have to define first
+                            what a block is. A block is a piece of
+                            code inside a set of curly braces {} and groups code statements together. An example of a
+                            block could be a function</p>
+                        <p>Global scope: A variable exists inside or outside a block. If a variable is declared outside
+                            all functions or curly braces ({}), it
+                            exists in the global scope. The global variables can be accessed by any line of code in the
+                            program, including inside
+                            blocks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How does the Event Loop works in JavaScript?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        The event loop is a process that waits for the Call Stack to be clear before pushing callbacks
+                        from the Task Queue to
+                        the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for
+                        available callbacks. If
+                        there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and
+                        repeats the same process.
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">

@@ -91,6 +91,7 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+  clearInterval(secondStart)
 };
 
 const closeModal = () => {
@@ -129,7 +130,7 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
-setInterval(() => {
+const secondStart = setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
   const timeStart = parseInt(timeSpent)

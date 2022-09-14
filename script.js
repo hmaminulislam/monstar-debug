@@ -63,8 +63,6 @@ const validate = (key) => {
 
 // FINISHED TYPING
 const gameOver = () => {
-  // stop countdwon second
-  clearInterval(secondStart)
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
   // so total time taken is current time - start time
@@ -115,8 +113,8 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
-      countdownOverlay.classList.add("hidden");
+      countdownOverlay.style.display = "none";
+      display.classList.add("inactive");
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
@@ -132,7 +130,7 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
-const secondStart = setInterval(() => {
+setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
   const timeStart = parseInt(timeSpent)

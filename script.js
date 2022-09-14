@@ -37,7 +37,6 @@ const typeController = (e) => {
   if (!validLetters.includes(newLetter)) {
     return;
   }
-
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
@@ -47,7 +46,6 @@ const typeController = (e) => {
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
-
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
@@ -58,6 +56,7 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
+  errorCount++
   return false;
 };
 
